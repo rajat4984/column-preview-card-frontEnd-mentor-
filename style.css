@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+}
+
+body {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 2em;
+  background-color: var(--Very-light-gray-background-headings-buttons);
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  padding: 3em;
+}
+.card:first-child {
+  background-color: var(--Bright-orange);
+  border-radius: 10px 10px 0 0;
+}
+.card:nth-child(2) {
+  background-color: var(--Dark-cyan);
+}
+.card:last-child {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0 0 10px 10px;
+}
+
+.card-logo {
+  margin: 1em 0;
+}
+
+.title {
+  font-size: 2.5em;
+}
+
+.title {
+  color: var(--Very-light-gray-background-headings-buttons);
+  margin: 0.8em 0;
+  text-transform: uppercase;
+}
+
+.card-desc {
+  color: var(--Transparent-white-paragraphs);
+  line-height: 1.7;
+  margin-bottom: 2em;
+}
+
+.btn {
+  padding: 1em 2.5em;
+  border-radius: 50px;
+  border: none;
+  font-size: 16px;
+  background-color: var(--Very-light-gray-background-headings-buttons);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.sedan-btn {
+  color: var(--Bright-orange);
+  border: 1px solid var(--Bright-orange);
+}
+.suv-btn {
+  color: var(--Dark-cyan);
+  border: 1px solid var(--Dark-cyan);
+}
+
+.luxury-btn {
+  color: var(--Very-Dark-cyan);
+  border: 1px solid var(--Very-dark-cyan);
+}
+
+.sedan-btn:hover {
+  background-color: var(--Bright-orange);
+}
+
+.luxury-btn:hover {
+  background-color: var(--Very-dark-cyan);
+}
+
+.suv-btn:hover {
+  background-color: var(--Dark-cyan);
+}
+
+.btn:hover {
+  color: var(--Very-light-gray-background-headings-buttons);
+  border: 1px solid var(--Very-light-gray-background-headings-buttons);
+}
+
+@media (min-width: 400px) {
+  .container {
+    margin: 3em 0;
+  }
+  .card {
+    padding: 3em 4.3em;
+  }
+
+  .card:first-child {
+    border-radius: 10px 0 0 10px;
+  }
+  .card:last-child {
+    border-radius: 0 10px 10px 0;
+  }
+  .btn {
+    padding: 1em 2em;
+    margin: 1em 0;
+  }
+  .card-logo {
+    margin: 0;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
